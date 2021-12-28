@@ -9,8 +9,31 @@
     <atom:link href="http://example.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>随缘记录，慢慢变好</description>
-    <pubDate>Thu, 23 Dec 2021 08:19:13 GMT</pubDate>
+    <pubDate>Mon, 27 Dec 2021 10:00:56 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title></title>
+      <link>http://example.com/2021/12/27/%E3%80%8A%E9%9A%8F%E4%BE%BF%E7%BF%BB%E7%BF%BB%E3%80%8B%E8%AF%BB%E5%90%8E%E5%B0%8F%E6%84%9F/</link>
+      <guid>http://example.com/2021/12/27/%E3%80%8A%E9%9A%8F%E4%BE%BF%E7%BF%BB%E7%BF%BB%E3%80%8B%E8%AF%BB%E5%90%8E%E5%B0%8F%E6%84%9F/</guid>
+      <pubDate>Mon, 27 Dec 2021 09:48:04 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;《随便翻翻》是收录在《且介亭杂文》的一篇杂文，鲁迅先生开门见山：“我想讲一点我的当作消闲的读书——随便翻翻。但如果弄得不好，会受害也说不定的。”&lt;/p&gt;
+&lt;p&gt;当作消闲的读书，自然便无法看的那么细致，甚至于这类读书有时会被各种各样的事情打断，以致于看的更是粗略，在脑中留下的</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>《随便翻翻》是收录在《且介亭杂文》的一篇杂文，鲁迅先生开门见山：“我想讲一点我的当作消闲的读书——随便翻翻。但如果弄得不好，会受害也说不定的。”</p><p>当作消闲的读书，自然便无法看的那么细致，甚至于这类读书有时会被各种各样的事情打断，以致于看的更是粗略，在脑中留下的印象便是更浅了几分。自然，这么读书几乎可以肯定无法做到“精”，看的书多了，接触面也就广了，书，或者说知识，也就“杂”了。自古至今有许多人都对“杂”这个字不带有好感，但“杂”也并非全是坏事。</p><p>读书也好，其他面的钻研也罢，能研究的足够“深”便可以被称为大佬，倘若深度不够，徒有广度，那也是不够的，更多的情况下是会被称为是“杂而不精”，然而，于我个人而言，在保证一定深度的情况下，广度也是有必要的。如若接触过、了解过，即使算不上了解，但始终是留下一些印象的</p>]]></content:encoded>
+      
+      
+      
+      
+      <comments>http://example.com/2021/12/27/%E3%80%8A%E9%9A%8F%E4%BE%BF%E7%BF%BB%E7%BF%BB%E3%80%8B%E8%AF%BB%E5%90%8E%E5%B0%8F%E6%84%9F/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>127.0.0.1和localhost不能正确映射的问题</title>
