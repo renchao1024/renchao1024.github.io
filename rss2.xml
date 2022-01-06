@@ -56,6 +56,29 @@
     </item>
     
     <item>
+      <title>redis编译报致命错误：jemallocjemalloc.h：没有那个文件或目录</title>
+      <link>http://example.com/2021/12/23/redis%E7%BC%96%E8%AF%91%E6%8A%A5%E8%87%B4%E5%91%BD%E9%94%99%E8%AF%AF%EF%BC%9Ajemallocjemalloc.h%EF%BC%9A%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95/</link>
+      <guid>http://example.com/2021/12/23/redis%E7%BC%96%E8%AF%91%E6%8A%A5%E8%87%B4%E5%91%BD%E9%94%99%E8%AF%AF%EF%BC%9Ajemallocjemalloc.h%EF%BC%9A%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95/</guid>
+      <pubDate>Wed, 22 Dec 2021 16:00:00 GMT</pubDate>
+      
+      <description>&lt;p&gt;在redis目录执行make命令时可能会出现报错：jemalloc/jemalloc.h：没有那个文件或目录&lt;/p&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p>在redis目录执行make命令时可能会出现报错：jemalloc/jemalloc.h：没有那个文件或目录</p><span id="more"></span><p>分配器allocator， 如果有MALLOC  这个 环境变量， 会有用这个环境变量去建立Redis。</p><p>而且libc 并不是默认的 分配器， 默认的是 jemalloc, 因为 jemalloc 被证明 有更少的 fragmentation problems 比libc。</p><p>但是如果你又没有jemalloc 而只有 libc 当然 make 出错。 所以加这么一个参数,运行如下命令：</p><p><code>make MALLOC=libc</code></p>]]></content:encoded>
+      
+      
+      <category domain="http://example.com/categories/%E6%97%A5%E5%B8%B8%E9%97%AE%E9%A2%98/">日常问题</category>
+      
+      
+      <category domain="http://example.com/tags/redis/">redis</category>
+      
+      
+      <comments>http://example.com/2021/12/23/redis%E7%BC%96%E8%AF%91%E6%8A%A5%E8%87%B4%E5%91%BD%E9%94%99%E8%AF%AF%EF%BC%9Ajemallocjemalloc.h%EF%BC%9A%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
       <title>127.0.0.1和localhost不能正确映射的问题</title>
       <link>http://example.com/2021/12/23/127.0.0.1%E5%92%8Clocalhost%E4%B8%8D%E8%83%BD%E6%AD%A3%E7%A1%AE%E6%98%A0%E5%B0%84%E7%9A%84%E9%97%AE%E9%A2%98/</link>
       <guid>http://example.com/2021/12/23/127.0.0.1%E5%92%8Clocalhost%E4%B8%8D%E8%83%BD%E6%AD%A3%E7%A1%AE%E6%98%A0%E5%B0%84%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
@@ -76,29 +99,6 @@
       
       
       <comments>http://example.com/2021/12/23/127.0.0.1%E5%92%8Clocalhost%E4%B8%8D%E8%83%BD%E6%AD%A3%E7%A1%AE%E6%98%A0%E5%B0%84%E7%9A%84%E9%97%AE%E9%A2%98/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>redis编译报致命错误：jemallocjemalloc.h：没有那个文件或目录</title>
-      <link>http://example.com/2021/12/23/redis%E7%BC%96%E8%AF%91%E6%8A%A5%E8%87%B4%E5%91%BD%E9%94%99%E8%AF%AF%EF%BC%9Ajemallocjemalloc.h%EF%BC%9A%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95/</link>
-      <guid>http://example.com/2021/12/23/redis%E7%BC%96%E8%AF%91%E6%8A%A5%E8%87%B4%E5%91%BD%E9%94%99%E8%AF%AF%EF%BC%9Ajemallocjemalloc.h%EF%BC%9A%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95/</guid>
-      <pubDate>Wed, 22 Dec 2021 16:00:00 GMT</pubDate>
-      
-      <description>&lt;p&gt;在redis目录执行make命令时可能会出现报错：jemalloc/jemalloc.h：没有那个文件或目录&lt;/p&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<p>在redis目录执行make命令时可能会出现报错：jemalloc/jemalloc.h：没有那个文件或目录</p><span id="more"></span><p>分配器allocator， 如果有MALLOC  这个 环境变量， 会有用这个环境变量去建立Redis。</p><p>而且libc 并不是默认的 分配器， 默认的是 jemalloc, 因为 jemalloc 被证明 有更少的 fragmentation problems 比libc。</p><p>但是如果你又没有jemalloc 而只有 libc 当然 make 出错。 所以加这么一个参数,运行如下命令：</p><p><code>make MALLOC=libc</code></p>]]></content:encoded>
-      
-      
-      <category domain="http://example.com/categories/%E6%97%A5%E5%B8%B8%E9%97%AE%E9%A2%98/">日常问题</category>
-      
-      
-      <category domain="http://example.com/tags/redis/">redis</category>
-      
-      
-      <comments>http://example.com/2021/12/23/redis%E7%BC%96%E8%AF%91%E6%8A%A5%E8%87%B4%E5%91%BD%E9%94%99%E8%AF%AF%EF%BC%9Ajemallocjemalloc.h%EF%BC%9A%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95/#disqus_thread</comments>
       
     </item>
     
