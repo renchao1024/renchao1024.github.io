@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>AttributeError module &#39;time&#39; has no attribute &#39;clock&#39; 解决方法</title>
+      <link href="/2022/01/11/AttributeError%20module%20&#39;time&#39;%20has%20no%20attribute%20&#39;clock&#39;%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+      <url>/2022/01/11/AttributeError%20module%20&#39;time&#39;%20has%20no%20attribute%20&#39;clock&#39;%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h5 id="一、问题："><a href="#一、问题：" class="headerlink" title="一、问题："></a>一、问题：</h5><p>在python3.8环境下使用<code>time.clock()</code>会出现报错：<code>AttributeError module &#39;time&#39; has no attribute &#39;clock&#39;</code> </p><span id="more"></span><p>在pycharm或者idea中提示<code>time</code>中是有<code>clock()</code>方法的，不会给报错，但是一旦运行调用这个方法就会出现上述错误，因为实际上python3.8已经不再支持<code>time.clock()</code>方法了。</p><h5 id="二、解决方法："><a href="#二、解决方法：" class="headerlink" title="二、解决方法："></a>二、解决方法：</h5><p>使用<code>time.perf_counter()</code>来代替原本的<code>time.clock()</code>，之后可正确运行调用</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日常问题 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>《随便翻翻》读后小感</title>
       <link href="/2021/12/25/%E3%80%8A%E9%9A%8F%E4%BE%BF%E7%BF%BB%E7%BF%BB%E3%80%8B%E8%AF%BB%E5%90%8E%E5%B0%8F%E6%84%9F/"/>
       <url>/2021/12/25/%E3%80%8A%E9%9A%8F%E4%BE%BF%E7%BF%BB%E7%BF%BB%E3%80%8B%E8%AF%BB%E5%90%8E%E5%B0%8F%E6%84%9F/</url>
