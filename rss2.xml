@@ -83,6 +83,30 @@
     </item>
     
     <item>
+      <title>This is a development server. Do not use it in a production deployment.</title>
+      <link>http://example.com/2021/12/23/This%20is%20a%20development%20server.%20Do%20not%20use%20it%20in%20a%20production%20deployment./</link>
+      <guid>http://example.com/2021/12/23/This%20is%20a%20development%20server.%20Do%20not%20use%20it%20in%20a%20production%20deployment./</guid>
+      <pubDate>Wed, 22 Dec 2021 16:00:00 GMT</pubDate>
+      
+      <description>&lt;hr&gt;
+&lt;h2 id=&quot;报错信息如下：&quot;&gt;&lt;a href=&quot;#报错信息如下：&quot; class=&quot;headerlink&quot; title=&quot;报错信息如下：&quot;&gt;&lt;/a&gt;报错信息如下：&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://gitee.com/picgo-drawing-bed/ren-typora/raw/master/typora/image-20211229170329252.png&quot; alt=&quot;image-20211229170329252&quot;&gt;&lt;/p&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<hr><h2 id="报错信息如下："><a href="#报错信息如下：" class="headerlink" title="报错信息如下："></a>报错信息如下：</h2><p><img src="https://gitee.com/picgo-drawing-bed/ren-typora/raw/master/typora/image-20211229170329252.png" alt="image-20211229170329252"></p><span id="more"></span><p>示例代码：</p><p><img src="https://gitee.com/picgo-drawing-bed/ren-typora/raw/master/typora/image-20211229170409275.png" alt="image-20211229170409275"></p><p>查询后发现是因为flask未使用WSGI启动，将代码改成使用WSGI启动就可以了。</p><h2 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h2><h3 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h3><ul><li>导包</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> gevent <span class="keyword">import</span> pywsgi</span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/picgo-drawing-bed/ren-typora/raw/master/typora/image-20211229170551745.png" alt="image-20211229170551745"></p><ul><li>修改启动方式</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    server = pywsgi.WSGIServer((<span class="string">&#x27;127.0.0.1&#x27;</span>,<span class="number">5000</span>),app)</span><br><span class="line">    server.serve_forever()</span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/picgo-drawing-bed/ren-typora/raw/master/typora/image-20211229170720140.png" alt="image-20211229170720140"></p><h3 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h3><ul><li>导包</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> wsgiref.simple_server <span class="keyword">import</span> make_server</span><br></pre></td></tr></table></figure><ul><li>修改启动方式</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    server = make_server(<span class="string">&#x27;&#x27;</span>, <span class="number">5000</span>, app)</span><br><span class="line">    server.serve_forever()</span><br></pre></td></tr></table></figure><p>实测两种都可以。</p>]]></content:encoded>
+      
+      
+      <category domain="http://example.com/categories/%E6%97%A5%E5%B8%B8%E9%97%AE%E9%A2%98/">日常问题</category>
+      
+      
+      <category domain="http://example.com/tags/python/">python</category>
+      
+      
+      <comments>http://example.com/2021/12/23/This%20is%20a%20development%20server.%20Do%20not%20use%20it%20in%20a%20production%20deployment./#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
       <title>redis编译报致命错误：jemallocjemalloc.h：没有那个文件或目录</title>
       <link>http://example.com/2021/12/23/redis%E7%BC%96%E8%AF%91%E6%8A%A5%E8%87%B4%E5%91%BD%E9%94%99%E8%AF%AF%EF%BC%9Ajemallocjemalloc.h%EF%BC%9A%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95/</link>
       <guid>http://example.com/2021/12/23/redis%E7%BC%96%E8%AF%91%E6%8A%A5%E8%87%B4%E5%91%BD%E9%94%99%E8%AF%AF%EF%BC%9Ajemallocjemalloc.h%EF%BC%9A%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95/</guid>
@@ -102,30 +126,6 @@
       
       
       <comments>http://example.com/2021/12/23/redis%E7%BC%96%E8%AF%91%E6%8A%A5%E8%87%B4%E5%91%BD%E9%94%99%E8%AF%AF%EF%BC%9Ajemallocjemalloc.h%EF%BC%9A%E6%B2%A1%E6%9C%89%E9%82%A3%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>This is a development server. Do not use it in a production deployment.</title>
-      <link>http://example.com/2021/12/23/%E3%80%90%E8%A7%A3%E5%86%B3%E3%80%91WARNING%20This%20is%20a%20development%20server.%20Do%20not%20use%20it%20in%20a%20production%20deployment./</link>
-      <guid>http://example.com/2021/12/23/%E3%80%90%E8%A7%A3%E5%86%B3%E3%80%91WARNING%20This%20is%20a%20development%20server.%20Do%20not%20use%20it%20in%20a%20production%20deployment./</guid>
-      <pubDate>Wed, 22 Dec 2021 16:00:00 GMT</pubDate>
-      
-      <description>&lt;hr&gt;
-&lt;h2 id=&quot;报错信息如下：&quot;&gt;&lt;a href=&quot;#报错信息如下：&quot; class=&quot;headerlink&quot; title=&quot;报错信息如下：&quot;&gt;&lt;/a&gt;报错信息如下：&lt;/h2&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Environment: production&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;WARNING: This is a development server. Do not use it in a production deployment.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Use a production WSGI server instead.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<hr><h2 id="报错信息如下："><a href="#报错信息如下：" class="headerlink" title="报错信息如下："></a>报错信息如下：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Environment: production</span><br><span class="line">WARNING: This is a development server. Do not use it in a production deployment.</span><br><span class="line">Use a production WSGI server instead.</span><br></pre></td></tr></table></figure><span id="more"></span><p><img src="https://gitee.com/picgo-drawing-bed/ren-typora/raw/master/typora/image-20211229170329252.png" alt="image-20211229170329252"></p><p>示例代码：</p><p><img src="https://gitee.com/picgo-drawing-bed/ren-typora/raw/master/typora/image-20211229170409275.png" alt="image-20211229170409275"></p><p>查询后发现是因为flask未使用WSGI启动，将代码改成使用WSGI启动就可以了。</p><h2 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h2><h3 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h3><ul><li>导包</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> gevent <span class="keyword">import</span> pywsgi</span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/picgo-drawing-bed/ren-typora/raw/master/typora/image-20211229170551745.png" alt="image-20211229170551745"></p><ul><li>修改启动方式</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    server = pywsgi.WSGIServer((<span class="string">&#x27;127.0.0.1&#x27;</span>,<span class="number">5000</span>),app)</span><br><span class="line">    server.serve_forever()</span><br></pre></td></tr></table></figure><p><img src="https://gitee.com/picgo-drawing-bed/ren-typora/raw/master/typora/image-20211229170720140.png" alt="image-20211229170720140"></p><h3 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h3><ul><li>导包</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> wsgiref.simple_server <span class="keyword">import</span> make_server</span><br></pre></td></tr></table></figure><ul><li>修改启动方式</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    server = make_server(<span class="string">&#x27;&#x27;</span>, <span class="number">5000</span>, app)</span><br><span class="line">    server.serve_forever()</span><br></pre></td></tr></table></figure><p>实测两种都可以。</p>]]></content:encoded>
-      
-      
-      <category domain="http://example.com/categories/%E6%97%A5%E5%B8%B8%E9%97%AE%E9%A2%98/">日常问题</category>
-      
-      
-      <category domain="http://example.com/tags/python/">python</category>
-      
-      
-      <comments>http://example.com/2021/12/23/%E3%80%90%E8%A7%A3%E5%86%B3%E3%80%91WARNING%20This%20is%20a%20development%20server.%20Do%20not%20use%20it%20in%20a%20production%20deployment./#disqus_thread</comments>
       
     </item>
     
